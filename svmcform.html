@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="display-2">Forms</h1>
+      <h1 class="display-3">Đăng ký thông tin sức khỏe</h1>
+      <div class="form-group">
+        <p>
+          Đây là khảo sát sức khỏe của Trung tâm nghiên cứu và phát triển điện
+          thoại di động SVMC.
+        </p>
+        <p>
+          BLĐ SVMC đề nghị tất cả nhân viên thực hiện khai báo bắt buộc 2
+          lần/tuần, cụ thể:
+        </p>
+        <p>- Thời gian làm khảo sát</p>
+        <ul>
+          <li>
+            Lần 1:
+            <ul>
+              <li>Thứ 4 hàng tuần 13:00 ~ 18:00 (Chốt dữ liệu lúc 18:00)</li>
+              <li>
+                Mở thời gian làm khảo sát bổ sung từ 18:00 thứ 4 đến 06:00 sáng
+                hôm sau thứ 5
+              </li>
+            </ul>
+          </li>
+          <li>
+            Lần 2:
+            <ul>
+              <li>Chủ nhật hàng tuần 09:00 ~ 16:00 (Chốt dữ liệu lúc 16:00)</li>
+              <li>
+                Mở thời gian làm khảo sát bổ sung từ 16:00 chủ nhật đến 06:00
+                sáng hôm sau thứ 2
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          - Mọi thắc mắc vui lòng liên hệ Hotline của SVMC 0886.550.990 hoặc
+          0888.990.082 để được hỗ trợ (thời gian tiếp nhận điện thoại 9:00 ~
+          19:00)
+        </p>
+      </div>
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="genid">Họ và tên</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="name"
+              required
+            />
+            <div class="invalid-feedback">Please provide a name.</div>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="genid">Mã nhân viên</label>
+            <input
+              type="number"
+              class="form-control"
+              id="genid"
+              placeholder="genId"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="phoneNumb">Số điện thoại</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phoneNumb"
+              placeholder="phone number"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="state">Loại hình làm việc</label>
+          <select
+            class="form-control custom-select"
+            name="state"
+            id="state"
+            required
+          >
+            <option value="" disabled hidden selected>Lựa chọn...</option>
+            <option value="a">Làm việc tại VP (WFO)</option>
+            <option value="b">Làm việc tại nhà do bộ phận bố trí (WFH)</option>
+            <option value="c">Nghỉ cách ly có làm việc (Cách ly - WFH)</option>
+            <option value="c">Nghỉ cách ly không làm việc (Calamity)</option>
+            <option value="c">Nghỉ Calamity theo bộ phận bố trí</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+        <h4 class="display-4">Thông điệp từ công ty</h4>
+        <div>
+          <ul>
+            <li>
+              Luôn đeo khẩu trang mọi lúc mọi nơi, đặc biệt tại các địa điểm
+              công cộng, nơi tập trung đông người
+            </li>
+            <li>Không tụ tập đông người.</li>
+            <li>
+              Không di chuyển đến các khu vực nguy hiểm được cơ quan nhà nước/
+              Công ty khuyến cáo.
+            </li>
+            <li>
+              Chủ động khai báo với chính quyền địa phương nếu đi về từ vùng có
+              dịch hoặc vùng thực hiện giãn cách xã hội.
+            </li>
+            <li>
+              Trong trường hợp được xét nghiệm Covid-19, yêu cầu Bạn khai báo
+              ngay với bộ phận Nhân sự qua số Hotline 0886.550.990 hoặc
+              0888.990.082
+            </li>
+          </ul>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="customCheck1"
+            required
+          />
+          <label class="custom-control-label" for="customCheck1">
+            Tôi cam kết tuân thủ các biện pháp phòng chống dịch của công ty và
+            khai báo trung thực thông tin</label
+          >
+        </div>
+        <h4 class="display-4">Câu hỏi</h4>
+        <ol>
+          <li>
+            <label for="question1"
+              >Hiện tại bạn có bị sốt ( từ 37.5 độ trở lên) hay có một trong các
+              các triệu chứng như ho, đau cơ, đau họng, khó thở, có đờm hay
+              không?</label
+            >
+            <div id="question1">
+              <div class="custom-control custom-radio">
+                <input
+                  type="radio"
+                  id="customRadio1"
+                  name="customRadio"
+                  class="custom-control-input"
+                  required
+                />
+                <label class="custom-control-label" for="customRadio1"
+                  >Không</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  type="radio"
+                  id="customRadio2"
+                  name="customRadio"
+                  class="custom-control-input"
+                  required
+                />
+                <label class="custom-control-label" for="customRadio2"
+                  >Có</label
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <label for="question2"
+              >Hiện tại bạn có bị sốt ( từ 37.5 độ trở lên) hay có một trong các
+              các triệu chứng như ho, đau cơ, đau họng, khó thở, có đờm hay
+              không?</label
+            >
+            <div id="question2">
+              <div class="custom-control custom-radio">
+                <input
+                  type="radio"
+                  id="customRadio1"
+                  name="customRadio"
+                  class="custom-control-input"
+                  required
+                />
+                <label class="custom-control-label" for="customRadio1"
+                  >Không</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  type="radio"
+                  id="customRadio2"
+                  name="customRadio"
+                  class="custom-control-input"
+                  required
+                />
+                <label class="custom-control-label" for="customRadio2"
+                  >Có</label
+                >
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="form-group">
+          <label for="validationCustom03">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom03"
+            required
+          />
+          <div class="invalid-feedback">Please provide a valid city.</div>
+        </div>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
